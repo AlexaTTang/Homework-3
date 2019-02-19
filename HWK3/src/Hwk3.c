@@ -92,7 +92,7 @@ int main()
 		}
 
 		//Population
-
+		int Spop, Bper, Dper,
 
 
 	return 0;
