@@ -10,7 +10,7 @@ int main()
 {
 
 	//Geometry Calculator
-	int  option, radius, length, width, base, height, area, pi;
+	int  option, radius, length, width, base, height, area;
 	//Menu
 	printf("Geometry Calculator\n\n");
 	printf("\t 1. Calculate the Area of a Circle\n");
@@ -21,22 +21,61 @@ int main()
 	//reads the input and stores it at the address of variable option
 	scanf("%d", &option);
 
-	//printf("you entered: %d", option);
 		switch(option)
 		{
 			case 1:
+				printf("Enter the radius of the circle: \n");
+				scanf("%d", &radius);
+					if (radius<0)
+					{
+						printf("Error, cannot have negative values");
+					}
+					else
+					{
+					area=(radius*radius)*3.14;
+					printf("The area of the circle is: %d", area);
+					}
+				break;
 
-			printf("Enter the radius of the circle: \n");
-			scanf("%d", &radius);
-			area=(radius*radius)*3.14;
-			printf("The area of the circle is: %d", area);
-			break;
+			case 2:
+				printf("Enter the length of the rectangle: \n");
+				scanf("%d", &length);
+				printf("Enter the width of the rectangle: \n");
+				scanf("%d", &width);
+					if (length< 0 || width < 0)
+					{
+						printf("Error, cannot have negative values");
+					}
+					else
+					{
+						area = length * width;
+						printf("The area of the rectangle is: %d", area);
+					}
+				break;
 
-			  default:
-			  printf("hello");
-			  break;
+			case 3:
+				printf("Enter the base of the triangle: \n");
+				scanf("%d", &base);
+				printf("Enter the height of the triangle: \n");
+				scanf("%d", &height);
+					if (base < 0 || height < 0)
+					{
+						printf("Error, cannot have negative values");
+					}
+					else
+					{
+						area = base * height * 0.5;
+						printf("The area of the triangle is: %d", area);
+					}
+				break;
 
+			case 4:
+				printf("You should use a calculator instead");
+				break;
 
+		    default:
+				printf("Please enter a number between 1-4");
+				break;
 		}
 
 
