@@ -18,6 +18,8 @@ int main()
 	printf("\t 3. Calculate the Area of a Triangle\n");
 	printf("\t 4. Quit\n\n");
 	printf("Enter your choice (1-4): \n");
+	//'cleans' out the console
+	fflush(stdout);
 	//reads the input and stores it at the address of variable option
 	scanf("%d", &option);
 		//depending on what the value of option is determines which case is executed
@@ -27,6 +29,7 @@ int main()
 			case 1:
 				//asking for user input
 				printf("Enter the radius of the circle: \n");
+				fflush(stdout);
 				scanf("%d", &radius);
 					//checks to see if input is a negative number
 					if (radius<0)
@@ -45,8 +48,10 @@ int main()
 			case 2:
 				//asking for user input
 				printf("Enter the length of the rectangle: \n");
+				fflush(stdout);
 				scanf("%d", &length);
 				printf("Enter the width of the rectangle: \n");
+				fflush(stdout);
 				scanf("%d", &width);
 					//checks to see if either length or width are negative values
 					if (length < 0 || width < 0)
@@ -65,8 +70,10 @@ int main()
 			case 3:
 				//asking for user input
 				printf("Enter the base of the triangle: \n");
+				fflush(stdout);
 				scanf("%d", &base);
 				printf("Enter the height of the triangle: \n");
+				fflush(stdout);
 				scanf("%d", &height);
 					//checks to see if either base or height are negative values
 					if (base < 0 || height < 0)
@@ -83,7 +90,7 @@ int main()
 				break;
 			//if user wants to quit
 			case 4:
-				printf("You should use a calculator instead");
+				printf("Fine. Use a calculator instead.");
 				break;
 			// this is executed if the user enters a number that is not between 1-4
 		    default:
@@ -92,7 +99,7 @@ int main()
 		}
 
 		//Population
-		int Spop, Bper, Dper,
+		int Spop, Bper, Dper;
 
 
 	return 0;
