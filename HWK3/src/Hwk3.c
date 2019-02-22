@@ -97,9 +97,39 @@ int main()
 				printf("Please enter a number between 1-4");
 				break;
 		}
+		printf("\n\n");
 
-		//Population
-		int Spop, Bper, Dper;
+	//Population
+	int numYr;
+	float sPop, bPer, dPer,newPop;
+	//collecting information for calculations
+	printf("Enter the starting population size: \n");
+	fflush(stdout);
+	scanf("%f", &sPop);
+	printf("Enter the number of years: \n");
+	fflush(stdout);
+	scanf("%d", &numYr);
+	printf("Enter the birth percentage rate: \n");
+	fflush(stdout);
+	scanf("%f", &bPer);
+	printf("Enter the death percentage rate: \n");
+	fflush(stdout);
+	scanf("%f", &dPer);
+	//checking to see if the entries made by user are valid
+	if ( sPop < 2 || dPer < 0 || bPer < 0 || numYr < 0)
+	{
+		printf("Invalid entry");
+	}
+	 //if they are valid entries then the total population is calculated and printed onto the console
+	 else
+	 {
+		 newPop = sPop + (bPer*sPop) - (dPer*sPop);
+		 float total = newPop*numYr ;
+		 printf("The total population is: %.2f\n", total);
+	 }
+
+
+
 
 
 	return 0;
