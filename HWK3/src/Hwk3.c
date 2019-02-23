@@ -5,10 +5,11 @@
  *  Created on: Feb 18, 2019
  *      Author: alexa
  */
+
 #include <stdio.h>
 int main()
 {
-
+	/*
 	//Geometry Calculator
 	int  option, radius, length, width, base, height, area;
 	//Menu
@@ -99,6 +100,7 @@ int main()
 		}
 		printf("\n\n");
 
+
 	//Population
 	int numYr;
 	float sPop, bPer, dPer,newPop;
@@ -128,8 +130,40 @@ int main()
 		 printf("The total population is: %.2f\n", total);
 	 }
 
-
-
+*/
+	//tic tac toe board
+	//a 2D array with three rows and three columns
+	int row, column;
+	char board [3][3] = {{'*', '*', '*'}, {'*', '*', '*'}, {'*', '*', '*'}};
+	printf("Let's play tic tac toe!\n");
+		for (int i = 0; i < 3; i++)
+		{
+			for(int j = 0; j < 3; j++)
+			{
+				printf(" %c", board[i][j]);
+			}
+			printf("\n");
+		}
+	printf("Player one enter the location for X on the board\n");
+	printf("Player one row option: ");
+	fflush(stdout);
+	scanf("%d", &row);
+	printf("Player one column option: ");
+	fflush(stdout);
+	scanf("%d", &column);
+	int checkRow()
+	{
+		for (int h = 0; h < 3; h++)
+		{
+			if(board[0][h] == board[1][h] == board[2][h])
+			{
+				printf("youve won!\n");
+			}
+			else
+			break;
+		}
+		return 0;
+	}
 
 
 	return 0;
